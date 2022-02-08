@@ -1,6 +1,13 @@
+@import "../../global.scss";
+
 .intro{
     background-color: #25274d;
     display: flex;
+
+    @include mobile{
+        flex-direction: column;
+        align-items: center;
+    }
 
     .left{
         flex: 0.5;
@@ -17,6 +24,10 @@
             float: left;
             position: relative;
             top: 55px;
+
+            @include mobile{
+                align-items: flex-start;
+            }
             
 
             img{
@@ -24,6 +35,11 @@
                 border-radius: 50%;
                 position: relative;
                 top: -32px;
+
+                @include mobile{
+                    top: -2px;
+                    height: 50%;
+                }
 
             }
         }
@@ -42,9 +58,18 @@
             justify-content: center;
             color: white;
 
+            @include mobile{
+                padding-left: 0;
+                align-items: center;
+            }
+
             h1{
                 font-size: 60px;
                 margin: 10px 0;
+
+                @include mobile{
+                    font-size: 40px;
+                }
             }
 
             h2{
@@ -54,6 +79,10 @@
             h3{
                 font-size: 30px;
                 margin: 10px 0;
+
+                @include mobile{
+                    font-size: 20px;
+                }
                 
                 span{
                     font-size: inherit;
@@ -87,6 +116,10 @@
                 color: white;
                 font-size: large;
                 animation: arrowBlink 2s infinite;
+
+                @include mobile{
+                    height: 25px;
+                }
             }
 
             @keyframes arrowBlink {
